@@ -1,0 +1,20 @@
+.card {
+  border: 1px solid silver;
+  background-color: #f0f0f0;
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+#container {
+  display: flex;
+}
+
+button {
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.hide {
+  display: none;
+}

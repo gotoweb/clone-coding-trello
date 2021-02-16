@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crello</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <template id="Card">
+    <div class="card">
+      <div class="view-mode">
+
+      </div>
+      <div class="edit-mode hide">
+        <input type="text">
+      </div>
+    </div>
+  </template>
+
+  <template id="Board">
+    <div class="board">
+      <div class="title"></div>
+      <div class="slot">
+
+      </div>
+      <button>Add another card</button>
+    </div>
+  </template>
+
+
+  <div>
+    <button id="add-board">Add Board</button>
+  </div>
+  <div id="container">
+
+  </div>
+
+  <script src="script.js" type="module"></script>
+</body>
+
+</html>
