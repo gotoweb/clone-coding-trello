@@ -1,9 +1,44 @@
-.card {
-  border: 1px solid silver;
-  background-color: #f0f0f0;
-  margin: 1rem;
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  padding: 0;
+  margin: 0;
+
+}
+
+.board {
   padding: 1rem;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  margin: 10px;
+  height: fit-content;
+}
+
+@keyframes highlight {
+  0% {background: yellow;}
+  100% {background: #fff;}
+}
+
+.card {
+  cursor: grab;
+  user-select: none;
+}
+
+.slot {
+  border: 1px dotted #ddd;
+  padding: 10px;
+}
+
+.view-mode, .edit-mode {
+  margin: 10px 0;
+  padding: 1rem;
+  border: 1px solid silver;
+  background-color: #fff;
   border-radius: 1rem;
+
+  animation: highlight 1s ease-in 1;
 }
 
 #container {
@@ -17,4 +52,35 @@ button {
 
 .hide {
   display: none;
+}
+
+.translucent {
+  opacity: .2;
+  display: none;
+}
+
+.dragging {
+  position: absolute;
+  width: 250px;
+  height: 53px;
+  margin: 0;
+  cursor: grabbing;
+  transform: rotate(5deg);
+  top: 0;
+  left: 0;
+}
+
+.dragging .view-mode {
+  box-shadow: 2px 2px 5px rgba(0,0,0,.3);
+}
+
+.droppable {
+  background-color: lightyellow;
+}
+
+.card.shadow {
+  border: 1px dashed #ccc;
+  background-color: rgb(255, 255, 158);
+  height: 53px;
+  border-radius: 1rem;
 }

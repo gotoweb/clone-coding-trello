@@ -1,6 +1,9 @@
-class Card {
+import Draggable from './Draggable.js'
+
+class Card extends Draggable {
   constructor(text) {
-    this._element = document.querySelector('#Card').content.cloneNode(true)
+    super()
+    this._element = document.importNode(document.querySelector('#Card').content, true)
     this._element.querySelector('.view-mode').textContent = text
   }
 
@@ -37,6 +40,8 @@ class Card {
   render(target) {
     target.append(this._element)
     this._element = target.children[target.children.length - 1]
+
+    super.render()
   }
 }
 
